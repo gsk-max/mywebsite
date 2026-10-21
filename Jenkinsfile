@@ -16,7 +16,7 @@ pipeline {
         }
         stage ("test") {
             steps {
-                    bat "npx ng text --no-watch --no-progress --browser=Chromeheadless"
+                   // bat "npx ng text --no-watch --no-progress --browser=Chromeheadless"
                  echo "testing"
                  }
         }
@@ -27,8 +27,8 @@ pipeline {
         }
         stage ("Deployment")  {
                steps  {
-                 bat  "del /q /s c:\\inetpub\\wwwroot\\newnew\\*"
-                 bat \\ "xcopy /E /Y /I dist\\newnew\\browser\\* c:\\inetpub\\wwwroot\\newnew\\"
+                 bat  "del /q /s c:\\inetpub\\wwwroot\\genapp\\*"
+                 bat  "xcopy /E /Y /I dist\\MyAppCIIT\\browser\\* c:\\inetpub\\wwwroot\\genapp\\"
                       }       
             }
     }
