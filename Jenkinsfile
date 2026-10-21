@@ -28,7 +28,7 @@ pipeline {
         stage ("Deployment")  {
                steps  {
                  bat  "del /q /s c:\\inetpub\\wwwroot\\newnew\\*"
-                 bat  "xcopy /E /Y /I dist\\newnew\\browser\\* c:\\inetpub\\wwwroot\\newnew\\"
+                 bat \\ "xcopy /E /Y /I dist\\newnew\\browser\\* c:\\inetpub\\wwwroot\\newnew\\"
                       }       
             }
     }
