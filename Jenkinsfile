@@ -29,7 +29,7 @@ pipeline {
                steps  {
                
                 bat  "del /q /s C:\\inetpub\\wwwroot\\genapp\\*"
-                bat  "xcopy /E /Y /I dist\\genapp\\browser\\* C:\\inetpub\\wwwroot\\genapp\\"
+                bat  "xcopy /E /Y /I dist\\genapp\\browser\\* C:\\inetpub\\wwwroot\\genapp"
                     }       
             }
     }
